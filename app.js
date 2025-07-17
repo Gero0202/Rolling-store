@@ -18,7 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const server = express()
-const PORT = process.env.SERVER_PORT
+const PORT = process.env.PORT || process.env.SERVER_PORT
 const ready = async () => {
     console.log("server is ready " + PORT);
     console.log("server is ready on mode " + args.mode);
