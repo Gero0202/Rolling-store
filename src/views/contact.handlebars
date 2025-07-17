@@ -1,0 +1,30 @@
+<!-- ⚠️ Este formulario es solo de demostracion visual. No tiene funcionalidad en produccion. -->
+
+<section id="contact">
+    <div class="container">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con nosotros. ¡Estamos aquí para
+            ayudarte!</p>
+
+        <form class="contact-form" onsubmit="return false;">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tu mensaje..." disabled></textarea>
+            </div>
+
+            <button class="submit-btn" disabled>
+                ✉️ Función de contacto deshabilitada en esta demo
+            </button>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+.welcome {
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Impact', sans-serif;
+    margin-top: 5%;
+}
+
+.title-welcome {
+    font-size: 3em;
+    color: #d03333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.store-name {
+    color: #d03333;
+}
+
+.main-welcome-message {
+    font-size: 1.8em;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+
+.button-welcome {
+    display: inline-block;
+    background-color: #d23131;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-welcome:hover {
+    background-color: #080505;
+    transform: scale(1.1);
+}

@@ -1,0 +1,153 @@
+#cart-container {
+    width: 65%;
+    height: 665px;
+    margin: 0 auto;
+    background-color: #161616;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 4%;
+    margin-bottom: 9%;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    transition: box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#cart-container:hover {
+    box-shadow: 0px 0px 10px rgba(251, 251, 251, 0.919);
+}
+
+#cart-container h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+#cart-items {
+    margin-top: 20px;
+}
+
+
+#cart-items {
+    margin-top: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    background-color: snow;
+    padding: 26px;
+    border-radius: 21px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.cart-item-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.remove-form {
+    margin: 0;
+}
+
+.remove-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.remove-button:hover {
+    background-color: #c0392b;
+}
+
+.cart-summary-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+#cart-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#cart-total h2 {
+    color: #ffffff;
+    font-size: 1.8em;
+    margin-bottom: 9px;
+}
+
+#cart-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-direction: row-reverse;
+}
+
+#checkout-form {
+    margin: 0;
+}
+
+#checkout-form button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: auto;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-form button:hover {
+    background-color: #2ecc71;
+}
+
+#clear-cart-button {
+    margin: 0 auto;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#clear-cart-button:hover {
+    background-color: #c0392b;
+}
+
+.cart-message {
+    color: green;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 0;
+    align-self: center;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    #cart-total h2 {
+        margin-right: 45px;
+        margin-bottom: 24px;
+    }
+}

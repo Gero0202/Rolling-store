@@ -1,0 +1,125 @@
+<div id="cart-container">
+    <h1>Carrito</h1>
+
+    {{#if cart.products.length}}
+    <div id="cart-items">
+        {{#each (groupProducts cart.products)}}
+        <div class="cart-item">
+            <div class="cart-item-info">
+                <h3>{{this.title}}</h3>
+                <p>Precio: ${{this.price}}</p>
+                <p>Cantidad: <span class="quantity">{{this.quantity}}</span> </p>
+                <p>Subtotal: {{multiply this.price this.quantity}}</p>
+            </div>
+            <form action="/cart/remove/{{this.cart_id}}" method="POST">
+                <button type="submit" class="remove-button">Eliminar</button>
+            </form>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="cart-summary-actions">
+        <div id="cart-total">
+            <h2>Total: ${{cart.total}}</h2>
+        </div>
+        <div id="cart-buttons">
+            <!-- 
+            🚨 LOGICA DE MERCADO PAGO COMENTADA 🚨
+            Este boton originalmente ejecutaba el flujo completo de Checkout Pro de Mercado Pago:
+            - POST a /mercadopago/create-preference
+            - Redirección a la plataforma de pago
+            - Recepción del webhook y guardado de orden
+
+            Por motivos de seguridad, el codigo fue comentado y reemplazado por una simulacion visual.
+            Para reactivarlo, descomenta el codigo original o consulta el README para mas detalles.
+            -->
+            <form id="checkout-form">
+                <button type="submit">Finalizar Compra</button>
+            </form>
+
+            <form action="/cart/clear" method="POST">
+                <button type="submit" id="clear-cart-button">Vaciar Carrito</button>
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+    <h2 style="color:rgb(255, 255, 255); margin: 0 auto;">Tu carrito está vacío 🛒</h2>
+    {{/if}}
+
+    {{#if message}}
+    <p class="cart-message">{{message}} {{email}}</p>
+    {{/if}}
+</div>
+
+<!-- MODAL DE SIMULACION DE MERCADO PAGO -->
+<div id="mp-modal" class="modal hidden">
+    <div class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <h2>🧾 Simulacion de Pago</h2>
+        <p>
+            Aquí te redirigiria a Mercado Pago con una preferencia de pago Checkout Pro.
+            <br><br>
+            La logica real de Mercado Pago esta implementada en el proyecto pero esta desactivada por seguridad.
+            <br><br>
+            Podes verla en el repositorio.
+        </p>
+    </div>
+</div>
+
+<!-- SCRIPT ACTUAL (simulacion de pago con modal) -->
+<script>
+    const checkoutForm = document.getElementById("checkout-form");
+    const modal = document.getElementById("mp-modal");
+    const closeBtn = document.getElementById("modal-close");
+
+    checkoutForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        modal.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });
+</script>
+
+
+<!-- ⛔ LOGICA REAL DE MERCADO PAGO (DESACTIVADA) -->
+<!-- <script>
+    const checkoutForm = document.getElementById("checkout-form");
+
+    checkoutForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch("/mercadopago/create-preference", {
+                method: "POST"
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                alert(`Error: ${errorData.error || "Error al crear preferencia"}`);
+                return;
+            }
+
+            const data = await response.json();
+            console.log("Preferencia creada:", data);
+
+            if (data && data.response && data.response.id) {
+                // Redirige al Checkout Pro
+                window.location.href = `https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=${data.response.id}`;
+            } else {
+                alert("No se pudo iniciar el paaaaago.");
+            }
+        } catch (error) {
+            console.error("Error al crear preferencia:", error);
+            alert("Error al procesar el pagooooooooooooooo.");
+        }
+    });
+</script> -->

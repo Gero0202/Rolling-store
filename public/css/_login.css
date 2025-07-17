@@ -1,0 +1,93 @@
+.title-login {
+    color: #f3f3f3;
+    margin-top: 69px;
+}
+
+#form-login {
+    width: 40%;
+    height: 350px;
+    margin: 0 auto;
+    margin-bottom: 24%;
+    background-color: #ffffff;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#form-login input {
+    margin-top: 15px;
+}
+
+#login {
+    background-color: #f01919;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 20%;
+    margin: 0 auto;
+}
+
+#login:hover {
+    background-color: #b71717;
+    transform: scale(0.9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.error-message-login {
+    color: #f32424;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.verify-link {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.verify-link p {
+    color: #000;
+}
+
+.go-to-verify {
+    background-color: transparent;
+    border: none;
+    color: #f02020;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+.go-to-verify:hover {
+    background: none;
+}
+
+.toggle-password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#togglePasswordBtn{
+    background-color: #ffffff;
+}
+
+#password{
+    width: 91%;
+}
+
+@media (max-width: 480px) {
+    #form-login {
+        width: 93%;
+    }
+
+    #login {
+        width: 25%;
+    }
+}

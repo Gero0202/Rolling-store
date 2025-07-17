@@ -1,0 +1,55 @@
+
+
+<div class="welcome">
+    <h1 class="title-welcome">¡Bienvenido a <span class="store-name">Rolling Store</span>!</h1>
+    <p class="main-welcome-message">La música no solo se escucha, se vive. En <span class="store-name">Rolling
+            Store</span> encontrarás lo mejor del universo musical: tus artistas favoritos, discos de vinilo, CDs y
+        mucho más.</p>
+    <p class="main-welcome-message">Aquí la música es la banda sonora de tu vida. ¡Explora, descubre y lleva tu pasión
+        musical al siguiente nivel!</p>
+    <a href="#seccion-vinilos" class="button-welcome">¡Comienza a descubrir!</a>
+</div>
+
+
+
+<div id="seccion-vinilos">
+    <section class="cards-container">
+        {{#each products}}
+        <div class="card">
+            <div id="thumbnail"></div>
+            {{#if this.thumbnails.[0]}}
+            <img src={{this.thumbnails.[0]}} alt="{{this._id}}" class="product-image">
+            {{else}}
+            <img class="product-image" src="https://i.pinimg.com/736x/00/22/f7/0022f79582483ded38a7011bc101f34a.jpg"
+                alt="{{this._id}}">
+            {{/if}}
+            <div class="product-info">
+                <h3 class="product-title">{{this.title}}</h3>
+                <p class="product-price">${{this.price}}</p>
+                <div class="product-details"> 
+                    
+                    <p class="product-category">CATEGORIA: {{uppercase this.category}}</p>
+                </div>
+                <a href="/product/{{this._id}}" class="product-info-boton">Más Detalles</a>
+            </div>
+        </div>
+        {{/each}}
+    </section>
+</div>
+
+
+<div id="first-frame">
+    <div id="second-frame">
+        <img src="/img/viejaslocas-contralapared.jpg" alt="">
+        <div class="texto-viejaslocas">
+            <p>Contra la pared - Viejas Locas</p>
+            <p>Contra la Pared es el segundo álbum de la emblemática banda argentina de rock barrial Viejas Locas,
+                lanzado en 1997. Este disco consolidó el estilo auténtico y rebelde del grupo, caracterizado por
+                letras cargadas de crudeza y sinceridad que narran la vida en los barrios, los excesos y los sueños
+                de libertad.</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="./index.js"></script>

@@ -1,0 +1,38 @@
+@import url("./_header.css");
+@import url("./_cart.css");
+@import url("./_contacto.css");
+@import url("./_detailProduct.css");
+@import url("./_error.css");
+@import url("./_footer.css");
+@import url("./_login.css");
+@import url("./_portadaLocas.css");
+@import url("./_products.css");
+@import url("./_profile.css");
+@import url("./_registerForm.css");
+@import url("./_registerProduct.css");
+@import url("./_signOutButton.css");
+@import url("./_us.css");
+@import url("./_verifyForm.css");
+@import url("./_welcome.css");
+@import url("./_succes.css");
+@import url("./_pending.css");
+@import url("./_modal.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('../img/body-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: "Roboto", serif;
+}

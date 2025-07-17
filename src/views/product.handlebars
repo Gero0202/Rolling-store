@@ -1,0 +1,48 @@
+<div id="detail-product">
+    <section class="detail-product-container">
+        {{#if product}}
+        <div class="product-header">
+            <h1 class="product-detail-title">{{product.title}}</h1>
+            <p class="product-detail-category">
+                {{#if product.category}}
+                    {{uppercase product.category}}
+                {{/if}}
+            </p>
+        </div>
+
+        <div class="product-main-content">
+            <div class="product-image-wrapper">
+                {{#if product.thumbnails.[0]}}
+                <img src={{product.thumbnails.[0]}} alt="{{product.title}}" class="product-detail-image">
+                {{else}}
+                <img src="https://i.pinimg.com/736x/00/22/f7/0022f79582483ded38a7011bc101f34a.jpg" alt="Imagen no disponible" class="product-detail-image">
+                {{/if}}
+            </div>
+
+            <div class="product-info-panel">
+                <div class="product-price-stock">
+                    <p class="product-detail-price">${{product.price}}</p>
+                    
+                </div>
+                
+                {{#if product.description}}
+                <div class="product-description">
+                    <h2>Descripción</h2>
+                    <p>{{product.description}}</p>
+                </div>
+                {{/if}}
+
+                <div class="product-actions">
+                    <button id="addToCartBtn" data-product-id="{{product._id}}" class="add-to-cart-button">Agregar al carrito</button>
+                    <div id="cart-message" class="cart-feedback-message"></div>
+                </div>
+            </div>
+        </div>
+
+        {{else}}
+        <h3 class="product-not-found">Producto no encontrado.</h3>
+        {{/if}}
+    </section>
+</div>
+<script src="/js/addProduct.js"></script>
+

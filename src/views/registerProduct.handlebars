@@ -1,0 +1,23 @@
+<div id="container">
+<div id="registerContainer">
+<section>
+    <h1>Register Form</h1>
+    <form id="registerForm">
+        <input type="text"  name="title" id="title" placeholder="Title">
+        <input type="number"  name="stock" id="stock" placeholder="Stock">
+        <input type="number"  name="price" id="price" placeholder="Price">
+        <input type="text"  name="category" id="category" placeholder="Category">
+        <div id="category-error" style="color: red; display: none; font-size: 18px;"></div>
+        <input type="text"  name="thumbnail" id="thumbnails" placeholder="Thumbnail (URL)">
+        <button type="button" style="width: 120px;" id="register">Register</button>
+    </form>
+</section>
+
+</div>
+
+
+<section id="products"></section>
+</div>
+
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+<script src="./js/registerProduct.js"></script>

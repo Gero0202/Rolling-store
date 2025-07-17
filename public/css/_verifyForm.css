@@ -1,0 +1,46 @@
+.error-verify {
+    color: #f32424;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.error-verify-form {
+    color: #f32424;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.verify {
+    background-color: #f01919;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#form-verify {
+    width: 40%;
+    height: 247px;
+    margin: 0 auto;
+    margin-bottom: 24%;
+    background-color: #ffffff;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    #form-verify {
+        width: 90%;
+    }
+
+    .verify {
+        width: 45%;
+    }
+}

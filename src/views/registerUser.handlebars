@@ -1,0 +1,16 @@
+<h1 class="title-register">Register form</h1>
+<form id="form-register">
+    <p id="error-message-form" class="error-message-form" style="display: none;"></p>
+    <p id="incompleted-form" class="incompleted-form" style="display: none;"></p>
+    <input type="text" name="name" id="name" placeholder="Nombre">
+    <input type="text" name="city" id="city" placeholder="Ciudad (OBLIGATORIO)">
+    <input type="email" name="email" id="email" placeholder="Email (OBLIGATORIO)">
+    <input type="date" name="date" id="date" placeholder="Edad">
+    <div class="toogle-password">
+    <input type="password" name="password" id="password" placeholder="Contraseña (OBLIGATORIO)" aria-describedby="togglePasswordBtn">
+    <button id="togglePasswordBtn" type="button" aria-label="Mostrar u ocultar contraseña" arial-pressed="false">👁️</button>
+    </div>
+    <input type="button" id="register" style="width: 50%;" value="Register">
+</form>
+
+<script src="/js/registerUser.js"></script>

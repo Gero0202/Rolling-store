@@ -1,0 +1,57 @@
+.title-register {
+    color: #f3f3f3;
+    margin-top: 69px;
+}
+
+#form-register {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 24%;
+    background-color: #ffffff;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+#form-register input {
+    margin-top: 15px;
+}
+
+#register {
+    background-color: #f01919;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 20%;
+    margin: 0 auto;
+}
+
+#register:hover {
+    background-color: #b71717;
+    transform: scale(0.9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.error-message-form {
+    color: red;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.incompleted-form {
+    color: red;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    #form-register {
+        width: 93%;
+    }
+}

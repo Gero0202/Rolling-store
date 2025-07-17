@@ -1,0 +1,19 @@
+<div class="success-container">
+    <h1>¡Gracias por tu compra!</h1>
+
+    <h2>Resumen del Pago</h2>
+    <ul class="payment-details">
+        <li><strong>ID del Pago:</strong> {{payment.id}}</li>
+        <li><strong>Email del pago (Mercado Pago):</strong> {{payment.payer_email}}</li>
+        <li><strong>Email de la cuenta:</strong> {{payment.user_email}}</li>
+        <li><strong>Estado:</strong> {{payment.status}}</li>
+        <li><strong>Detalle:</strong> {{payment.status_detail}}</li>
+        <li><strong>Total pagado:</strong> ${{payment.transaction_amount}}</li>
+        <li><strong>Método de pago:</strong> {{payment.payment_method_id}}</li>
+        <li><strong>Tipo de pago:</strong> {{payment.payment_type_id}}</li>
+        <li><strong>Fecha de pago:</strong> {{payment.date_created}}</li>
+    </ul>
+
+    <a href="/" class="back-home-button">Volver al inicio</a>
+</div>
+

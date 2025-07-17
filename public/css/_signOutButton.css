@@ -1,0 +1,29 @@
+#button-signout {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#button-signout a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+#button-signout a:hover {
+    color: #f54838;
+}
+
+#signout-button {
+    margin-top: 0px;
+    padding: 9px;
+    background-color: #ec2323d1;
+}
+
+#signout-button:hover {
+    background-color: #d61717ab;
+}

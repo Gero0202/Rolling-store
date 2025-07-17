@@ -1,0 +1,7 @@
+node_modules
+.env
+.env.*
+.env.prod
+.env.dev
+!.env.example
+ngrok.exe

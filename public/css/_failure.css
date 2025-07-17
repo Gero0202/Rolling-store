@@ -1,0 +1,13 @@
+.payment-container.failure h1 {
+  color: #ff4e4e;
+  text-shadow: 0 0 5px rgba(255, 78, 78, 0.5);
+}
+
+.payment-container.failure a {
+  background-color: #ff4e4e;
+  color: #fff;
+}
+
+.payment-container.failure a:hover {
+  background-color: #d83737;
+}

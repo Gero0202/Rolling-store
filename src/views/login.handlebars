@@ -1,0 +1,20 @@
+<h1 class="title-login">LOGIN</h1>
+
+<form id="form-login">
+    <input type="email" placeholder="Email" name="email" id="email">
+    <div class="toggle-password">
+        <input type="password" placeholder="Password" name="password" id="password" aria-describedby="togglePasswordBtn">
+        <button id="togglePasswordBtn" type="button" aria-label="Mostrar u ocultar contraseña" arial-pressed="false">👁️</button>
+    </div>
+    <input type="button" id="login" value="Login">
+    <p id="error-message-login" class="error-message-login" style="display: none;"></p>
+
+    <div class="verify-link">
+        <p>¿Ya te registraste pero no verificaste tu cuenta?</p>
+        <button type="button" class="go-to-verify" id="go-to-verify">Ir a verificación</button>
+    </div>
+
+</form>
+
+
+<script src="/js/login.js"></script>
