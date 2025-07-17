@@ -28,10 +28,11 @@
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
-    "socket.io": "^4.8.1"
-  },
-  "devDependencies": {
+    "socket.io": "^4.8.1",
     "@faker-js/faker": "^9.8.0",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    
   }
 }
