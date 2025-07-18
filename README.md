@@ -180,6 +180,15 @@ El proyecto ha sido desarrollado teniendo en cuenta las siguientes consideracion
 
 ---
 
+## 🚀 Deploy
+
+El proyecto está desplegado en Render:  
+🔗 [https://rolling-store.onrender.com/](https://rolling-store.onrender.com/)
+
+> ⚠️ Al estar en un plan gratuito, el servidor puede tardar unos segundos en activarse si estuvo inactivo.
+
+---
+
 ## 👤 Autor y Créditos
 
 ### 10. Créditos y Autoría
